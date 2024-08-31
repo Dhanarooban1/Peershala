@@ -4,6 +4,15 @@ import mentor1 from '../assets/mentor1.jpeg'
 import mentor2 from '../assets/mentor2.jpeg'
 import mentor3 from '../assets/mentor3.jpeg'
 import mentor4 from '../assets/mentor4.jpeg'
+
+import Image1 from '../assets/Photos/Image1.jpeg'
+import Image2 from '../assets/Photos/Image2.jpeg'
+import Image3 from '../assets/Photos/Image3.jpeg'
+import Image4 from '../assets/Photos/Image4.jpeg'
+import Image5 from '../assets/Photos/Image5.jpeg'
+import Image6 from '../assets/Photos/Image6.jpeg'
+
+const GI = [Image1,Image2,Image3,Image4,Image5,Image6]
 const mentors = [mentor1, mentor2, mentor3, mentor4];
 
 const Home = () => {
@@ -28,8 +37,8 @@ const Home = () => {
 
       <main className="mx-auto px-4 py-8">
         <section className="text-center mb-16 h-[100vh] background-image flex flex-col items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Join Our Free Webinars</h1>
-          <p className="text-lg md:text-xl mb-6">Enhance your skills and knowledge with our free, expert-led webinars. Register now to secure your spot!</p>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black md:text-white">Join Our Free Webinars</h1>
+        <p className="text-lg md:text-xl mb-6 text-black md:text-white">Enhance your skills and knowledge with our free, expert-led webinars. Register now to secure your spot!</p>
           <button className="bg-blue-500 text-white px-6 py-3 rounded text-lg w-48">Join a Webinar</button>
         </section>
 
@@ -71,17 +80,19 @@ const Home = () => {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Our Gallery</h2>
-          <p className="mb-4">Browse through our gallery to see highlights from our webinars, seminars, and mentorship programs, showcasing the positive impact we've made.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="aspect-video bg-gray-200"></div>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-full md:w-auto">View More</button>
-          </div>
-        </section>
+  <h2 className="text-2xl md:text-3xl font-semibold mb-6">Our Gallery</h2>
+  <p className="mb-4">Browse through our gallery to see highlights from our webinars, seminars, and mentorship programs, showcasing the positive impact we've made.</p>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {GI.map((GI,i) => (
+      <div key={i} className="aspect-video">
+        <img src={GI} alt={`Gallery Image ${i}`} className="object-cover w-full h-full" />
+      </div>
+    ))}
+  </div>
+  <div className="text-center mt-6">
+    <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-full md:w-auto">View More</button>
+  </div>
+</section>
 
 
 
