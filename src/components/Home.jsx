@@ -14,6 +14,9 @@ import Image2 from "../assets/Photos/Image2.jpeg";
 import Image3 from "../assets/Photos/Image3.jpeg";
 import Image4 from "../assets/Photos/Image4.jpeg";
 import Image5 from "../assets/Photos/Image5.jpeg";
+
+
+
 import Image6 from "../assets/Photos/Image6.jpeg";
 
 import { GiFastBackwardButton } from "react-icons/gi";
