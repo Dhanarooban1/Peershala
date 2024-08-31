@@ -1,5 +1,10 @@
 import React from 'react';
 import { Calendar, Mail, Users } from 'lucide-react';
+import mentor1 from '../assets/mentor1.jpeg'
+import mentor2 from '../assets/mentor2.jpeg'
+import mentor3 from '../assets/mentor3.jpeg'
+import mentor4 from '../assets/mentor4.jpeg'
+const mentors = [mentor1, mentor2, mentor3, mentor4];
 
 const Home = () => {
   return (
@@ -21,11 +26,11 @@ const Home = () => {
         </nav>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
-        <section className="text-center mb-16">
+      <main className="mx-auto px-4 py-8">
+        <section className="text-center mb-16 h-[100vh] background-image flex flex-col items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Join Our Free Webinars</h1>
           <p className="text-lg md:text-xl mb-6">Enhance your skills and knowledge with our free, expert-led webinars. Register now to secure your spot!</p>
-          <button className="bg-blue-500 text-white px-6 py-3 rounded text-lg w-full md:w-auto">Join a Webinar</button>
+          <button className="bg-blue-500 text-white px-6 py-3 rounded text-lg w-48">Join a Webinar</button>
         </section>
 
         <section className="mb-16">
@@ -78,21 +83,25 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Meet Our Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="border rounded-lg p-6">
-                <div className="aspect-square bg-gray-200 rounded-full mb-4"></div>
-                <h3 className="font-semibold">Lorem Ipsum</h3>
-                <p className="text-sm text-gray-600">Project Head</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-full md:w-auto">View More</button>
-          </div>
-        </section>
+
+
+<section className="mb-16">
+  <h2 className="text-2xl md:text-3xl font-semibold mb-6">Meet Our Team</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    {mentors.map((mentor, i) => (
+      <div key={i} className="border rounded-lg p-6">
+        <div className="aspect-square rounded-full mb-4 overflow-hidden">
+          <img src={mentor} alt={`mentor-${i+1}`} className="object-cover w-full h-full" />
+        </div>
+        <h3 className="font-semibold">Lorem Ipsum</h3>
+        <p className="text-sm text-gray-600">Project Head</p>
+      </div>
+    ))}
+  </div>
+  <div className="text-center mt-6">
+    <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded w-full md:w-auto">View More</button>
+  </div>
+</section>
 
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">Upcoming Bootcamps</h2>
