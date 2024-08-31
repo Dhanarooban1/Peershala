@@ -9,3 +9,17 @@
   color: white;
   background-repeat: no-repeat;
 }
+
+.background-image1{
+  background-image: url('./assets/bgg.jpeg');
+  background-size: 100% ;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.background-image2{
+  background-image: url('./assets/bggg.jpeg');
+  background-size: 100% ;
+  color: white;
+  background-repeat: no-repeat;
+}
