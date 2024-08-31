@@ -5,9 +5,9 @@ import mentor2 from "../assets/mentor2.jpeg";
 import mentor3 from "../assets/mentor3.jpeg";
 import mentor4 from "../assets/mentor4.jpeg";
 import image from "../assets/image.png";
-import Page3 from "./page3";
-import Page1 from "./page1";
-import Page2 from "./page2";
+import Page3 from "./Page3";
+import Page1 from "./Page1";
+import Page2 from "./Page2";
 
 import Image1 from "../assets/Photos/Image1.jpeg";
 import Image2 from "../assets/Photos/Image2.jpeg";
@@ -27,7 +27,6 @@ const mentors = [mentor1, mentor2, mentor3, mentor4];
 
 const Home = () => {
   const [page, setPage] = useState(1);
-  console.log(page);
   function forward() {
     if (page < 3) {
       setPage(page + 1);
@@ -51,8 +50,7 @@ const Home = () => {
               <img
                 src={image}
                 style={{ width: "6%", height: "auto" }}
-                // alt={`Gallery Image ${i}`}
-                // className="object-cover w-full h-full"
+            
               />
             <div className="flex flex-wrap justify-around w-[100%] gap-3">
               <a href="#" className="text-gray-600 hover:text-gray-900">
