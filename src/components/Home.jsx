@@ -98,7 +98,7 @@ const Home = () => {
 
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            Our ~ & Goals
+            Our Aspirations & Goals
           </h2>
           <p className="text-lg md:text-xl mb-6">
             Peershala empowers students through dynamic, peer-driven learning
@@ -126,7 +126,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mb-16">
+        
+
+        <section className="mb-16 border rounded-lg p-6" >
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
             Achievements
           </h2>
