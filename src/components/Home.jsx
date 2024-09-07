@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, Mail, Users } from "lucide-react";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import mentor1 from "../assets/mentor1.jpeg";
 import mentor2 from "../assets/mentor2.jpeg";
 import mentor3 from "../assets/mentor3.jpeg";
@@ -15,8 +16,6 @@ import Image3 from "../assets/Photos/Image3.jpeg";
 import Image4 from "../assets/Photos/Image4.jpeg";
 import Image5 from "../assets/Photos/Image5.jpeg";
 
-
-
 import Image6 from "../assets/Photos/Image6.jpeg";
 
 import { GiFastBackwardButton } from "react-icons/gi";
@@ -26,6 +25,7 @@ const GI = [Image1, Image2, Image3, Image4, Image5, Image6];
 const mentors = [mentor1, mentor2, mentor3, mentor4];
 
 const Home = () => {
+  const menuItems = ['HOME', 'ABOUT US', 'EVENTS', 'MENTORS', 'STUDENTS', 'GET INVOLVED'];
   const [page, setPage] = useState(1);
   function forward() {
     if (page < 3) {
@@ -44,36 +44,39 @@ const Home = () => {
   }
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow">
-        <nav className="container mx-auto px-4 py-3">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-              <img
-                src={image}
-                style={{ width: "6%", height: "auto" }}
-            
-              />
-            <div className="flex flex-wrap justify-around w-[100%] gap-3">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Home
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                About Us
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Events
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Mentors
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Students
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Get Involved
-              </a>
+      <header className="bg-black shadow">
+        <nav className="bg-white">
+          <div className="flex bg-slate-900 py-3  text-white justify-between items-center px-4">
+            <span className="text-sm flex items-center px-5 space-x-2">
+              <Mail className="w-5 h-5 " />
+              <span>peershalabatch@gmail.com</span>
+            </span>
+            <div className="flex px-5  space-x-4">
+              <Instagram className="w-5 h-5" />
+              <Linkedin className="w-5 h-5" />
+              <Facebook className="w-5 h-5" />
             </div>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded w-full md:w-auto">
-              Register
+          </div>
+
+
+
+          <div className="flex items-center justify-between w-full  px-6 py-3">
+            <img src={image} alt="Logo"  className="w-60 h-12 border border-gray-300 " />
+            <div className="space-x-8 ">
+        {menuItems.map((item, index) => (
+          <a
+            key={index}
+            href="#"
+            className="text-black font-bold hover:text-black-500 relative group"
+          >
+            {item}
+            <span className="absolute left-0 bottom-[-4px] w-full h-0.5 bg-blue-500 transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+          </a>
+        ))}
+      </div>
+
+            <button className="bg-[#C45C27] text-white px-10 py-2 ">
+              REGISTER
             </button>
           </div>
         </nav>
@@ -96,39 +99,57 @@ const Home = () => {
           {page === 1 ? <Page1 /> : page === 2 ? <Page2 /> : <Page3 />}
         </div>
 
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            Our Aspirations & Goals
-          </h2>
-          <p className="text-lg md:text-xl mb-6">
-            Peershala empowers students through dynamic, peer-driven learning
-            and cutting-edge tools for academic and future success.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                Mission
-              </h3>
-              <p>
-                Peershala's mission is to empower students with skills, foster a
-                dynamic learning community, and provide mentorship for academic
-                and professional success.
-              </p>
+        <section className="h-[100vh] border border-red-500 flex py-32 px-10">
+          <div className="flex flex-col w-[60%] justify-around">
+            <h1 className="text-2xl font-medium text-red-400 my-4">
+              -ABOUT US
+            </h1>
+            <h2 className="text-2xl md:text-5xl font-semibold mb-6 text-indigo-900">
+              Our Aspirations & Goals
+            </h2>
+            <h2 className="text-2xl md:text-2xl font-semibold mb-6 text-blue-500">
+              Peershala: Buildings skills together
+            </h2>
+            <p className="text-lg md:text-xl mb-6">
+              Peershala empowers students through dynamic, peer-driven learning
+              and cutting-edge tools for academic and future success.
+            </p>
+            <div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="border rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                    Mission
+                  </h3>
+                  <p>
+                    Peershala's mission is to empower students with skills,
+                    foster a dynamic learning community, and provide mentorship
+                    for academic and professional success.
+                  </p>
+                </div>
+                <div className="border rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                    Vision
+                  </h3>
+                  <p>
+                    Peershala envisions limitless education, fostering lifelong
+                    learning and growth to develop adaptable leaders through
+                    mentorship and knowledge sharing.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">Vision</h3>
-              <p>
-                Peershala envisions limitless education, fostering lifelong
-                learning and growth to develop adaptable leaders through
-                mentorship and knowledge sharing.
-              </p>
+          </div>
+          <div className="h-[100%] w-10 border border-black w-[40%] flex">
+            <div className="h-[100%] w-[50%] border border-black flex flex-start">
+              <img src={Image4} alt="" className="h-[50%] object-center" />
+            </div>
+            <div className="h-[100%] w-[50%] border border-black flex items-end">
+              <img src={Image1} alt="" />
             </div>
           </div>
         </section>
 
-        
-
-        <section className="mb-16 border rounded-lg p-6" >
+        <section className="mb-16 border rounded-lg p-6">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
             Achievements
           </h2>
