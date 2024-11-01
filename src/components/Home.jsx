@@ -235,7 +235,7 @@ const Home = () => {
             </div>
           </div>
           {/* Right Image Section */}
-          <div className="max-w-2xl mx-auto p-4 md:mt-0 mt-12">
+          <div className="max-w-2xl mx-auto p-4 md:mt-0 mt-12 hidden md:block">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               {/* Left column */}
               <div className="space-y-6">
