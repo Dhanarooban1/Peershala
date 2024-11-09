@@ -20,6 +20,7 @@ import Image6 from "../assets/Photos/Image6.jpeg";
 
 import { GiFastBackwardButton } from "react-icons/gi";
 import { GiFastForwardButton } from "react-icons/gi";
+import '../App.css'
 
 const GI = [Image1, Image2, Image3, Image4, Image5, Image6];
 const mentors = [mentor1, mentor2, mentor3, mentor4];
@@ -120,7 +121,7 @@ const Home = () => {
               <img
                 src={Logo}
                 alt="Logo"
-                className="w-40 sm:w-60 h-8 sm:h-12 border border-gray-300"
+                className="site-logo w-40 sm:w-60 h-8 sm:h-12 border border-gray-300"
               />
 
               {/* Mobile menu button */}
