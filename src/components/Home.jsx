@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { Calendar, Mail, Users } from "lucide-react";
 import { Instagram, Linkedin, Facebook, ChevronLeft, ChevronRight, MailIcon, UsersIcon, Menu, X, Twitter } from "lucide-react";
-import mentor1 from "../assets/mentor1.jpeg";
-import mentor2 from "../assets/mentor2.jpeg";
-import mentor3 from "../assets/mentor3.jpeg";
-import mentor4 from "../assets/mentor4.jpeg";
+
+import mentor1 from "../assets/Photos/Mentors/mentor1.jpeg"
+import mentor2 from "../assets/Photos/Mentors/mentor2.jpeg";
+import mentor3 from "../assets/Photos/Mentors/mentor3.jpeg";
+import mentor4 from "../assets/Photos/Mentors/mentor4.jpeg";
 import Logo from "../assets/Logo.png";
-import Page3 from "./Page3";
-import Page1 from "./Page1";
-import Page2 from "./Page2";
 
-import Image1 from "../assets/Photos/Image1.jpeg";
-import Image2 from "../assets/Photos/Image2.jpeg";
-import Image3 from "../assets/Photos/Image3.jpeg";
-import Image4 from "../assets/Photos/Image4.jpeg";
-import Image5 from "../assets/Photos/Image5.jpeg";
+import Page3 from "./SlideshowPages/Page3";
+import Page1 from "./SlideshowPages/Page1";
+import Page2 from "./SlideshowPages/Page2";
 
-import Image6 from "../assets/Photos/Image6.jpeg";
-
+import Image1 from "../assets/Photos/Images/Image1.jpeg";
+import Image2 from "../assets/Photos/Images/Image2.jpeg";
+import Image3 from "../assets/Photos/Images/Image3.jpeg";
+import Image4 from "../assets/Photos/Images/Image4.jpeg";
+import Image5 from "../assets/Photos/Images/Image5.jpeg";
+import Image6 from "../assets/Photos/Images/Image6.jpeg";
 import { GiFastBackwardButton } from "react-icons/gi";
 import { GiFastForwardButton } from "react-icons/gi";
 import '../App.css'
@@ -511,12 +511,11 @@ const Home = () => {
       <footer className="bg-[#1D2D50] text-white">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            {/* Logo */}
             <div className="mb-6 md:mb-0">
               <img
-                src="Logo"
+                src={Logo}
                 alt="Peershala"
-                className="h-8"
+            className="site-logo w-40 sm:w-60 h-8 sm:h-12 "
               />
             </div>
 
